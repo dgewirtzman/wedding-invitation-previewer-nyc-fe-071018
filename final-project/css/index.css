@@ -1,0 +1,218 @@
+html {
+  background-color: #f2f2f2;
+  font-family: 'Karla', sans-serif;
+  min-width: 400px;
+  max-width: 1250px;
+}
+
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: normal;
+  font-size: 4em;
+  line-height: 1em;
+}
+
+ hr {
+  border: 0;
+  height: 2px;
+  background: black;
+  width: 90%;
+ }
+ 
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left-side right-side";
+}
+
+input {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-color: black;
+  width: 60%;
+  height: 3em;
+}
+
+input[type=text]:focus{
+  outline: 2px solid deepskyblue;
+}
+
+.invitation-options {
+  grid-area: left-side;
+  padding-left: 10%;
+}
+
+.invitation-options input {
+  margin: 0px
+}
+
+.style-text {
+  display: inline-block;
+  font-size: 1.25em;
+  padding-right: 2em;
+}
+
+.invitation-display {
+  grid-area: right-side;
+  width: 53.57vh;
+  height: 75vh;
+}
+
+.invitationText {
+  text-align: center;
+}
+
+.initials span {
+  font-size: 10vh;
+}
+
+.names span {
+  font-size: 5vh;
+}
+
+.invitationLastName {
+  font-size: 5vh;
+  padding-bottom: 2.5vh;
+}
+
+.inviteText {
+  font-size: 2.5vh;
+  padding-top: 1.25vh;
+  padding-bottom: 1.25vh;
+}
+
+.invitationDate, .invitationLocation {
+  font-size: 3vh;
+  padding-bottom: 1.25vh;
+}
+
+#style-cateredaffair {
+  position: absolute;
+  background-image: url("/images/cateredaffair.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: 'Lobster', cursive;
+  transition: all 1s ease;
+  background-position: top center;
+  opacity: 1;
+}
+
+#style-idoido {
+  position: absolute;
+  background-image: url("/images/idoido.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: 'Mystery Quest', cursive;
+  transition: all 1s ease;
+  opacity: 1;
+}
+
+#style-sweeneytodd {
+  position: absolute;
+  background-image: url("/images/sweeney.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: 'Trade Winds', cursive;
+  transition: all 1s ease;
+  opacity: 1;
+}
+
+#style-cateredaffair .invitationText {
+  padding-top: 5vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+#style-idoido .invitationText {
+  padding-top: 5vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+#style-sweeneytodd .initials span {
+ font-size: 9vh;
+ padding-top: 1vh;
+ line-height: 10vh;
+}
+
+#style-sweeneytodd .invitationText {
+  padding-top: 12.5vh;
+  padding-left: 7.25vh;
+  padding-right: 7.25vh;
+}
+
+#style-sweeneytodd .names span {
+  line-height: 5vh;
+  font-size: 4vh;
+}
+
+#style-sweeneytodd .invitationLastName {
+  padding-bottom: 1.25vh;
+  font-size: 4vh;
+}
+
+#style-sweeneytodd .inviteText {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+#style-sweeneytodd .invitationDate, #style-sweeneytodd .invitationLocation {
+  font-size: 2.5vh;
+  padding-bottom: 0vh;
+}
+
+button {
+  font-family: 'Karla', sans-serif;
+  width: 60%;
+  height: 3em;
+	color: #000000;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: .08em;
+	border: 2px solid #000000;
+	background-color: #ffffff;
+	overflow: hidden;
+}
+
+button:hover, button:focus, button:active {
+  color: white;
+  background: deepskyblue;
+  outline: 0;
+}
+
+.hidden {
+  opacity: 0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "left-side" 
+                         "right-side";
+  }
+  
+  .invitation-options {
+    padding-left: 0px;
+  }
+  
+  input {
+    width: 95%;
+  }
+  
+  button {
+    width: 95%;
+    height: 3em;
+    margin-bottom: 5vh;
+  }
+  
+  hr {
+    width: 95%;
+  }
+  
+  .invitation-display {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
